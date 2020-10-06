@@ -5,14 +5,15 @@
     margin: 0;
 }
 
-/*Adds the "selected" color to the body of the page.*/
+/*Adds the "selected" color to the background of the overall page.*/
 body {
     background-color: #d9dcd6;
 }
 
 /*Adds the "selected" elements to the header tag. */
 header {
-    padding: 20px;
+    /* padding around the header so that the block appears nicely spaced and aesthetically pleasing. */
+    padding: 20px; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
@@ -29,7 +30,7 @@ header h1 .seo {
     color: #d9dcd6;
 }
 
-/*Setting these elements to the header nav allows for the navigation link to float to the right and set at certain font. Also adds padding to the top of the block and margin to the right.*/
+/* This code selector is giving the navigation bar up to with the links */
 header nav {
     padding-top: 15px;
     margin-right: 20px;
@@ -91,8 +92,42 @@ p {
     margin-left: 20px;
 }
 
-/*Everything that is included with the class "benefits" with be set with these elements.*/
-.benefits {
+/*Everything within an article block are set with these given elements*/
+article {
+    /* A margin at the bottom of 20px*/
+    margin-bottom: 20px; 
+    /*Adds padding of 50px*/
+    padding: 50px; 
+    /*Makes the height of each box 300px*/
+    height: 300px; 
+    /*Sets the font to Gill Sans*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    /*The colors of the boxes with be blue*/
+    background-color: #0072bb; 
+     /*The text within the boxes will be white.*/
+    color: #ffffff;
+    /* The page at small sizes didn't  */
+    overflow: auto;
+    clear: both;
+}
+
+/*Allows each of the images with these given IDs a max height of 200 px for consistency throughout the page.*/
+#search-engine-optimization img, 
+#online-reputation-management img, 
+#social-media-marketing img {
+    max-height: 200px;
+}
+
+/*Makes all the font sizes of these class headings to be size 36 as well giving them a margin spacing of 20px at the bottom.*/
+#search-engine-optimization h2, 
+#online-reputation-management h2, 
+#social-media-marketing h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/*Everything that is included with the tag "section" will be set with these elements.*/
+section {
     margin-right: 20px;
     padding: 20px;
     clear: both;
@@ -128,34 +163,7 @@ p {
     max-width: 150px;
 }
 
-/*Each of these classes are set with given elements*/
-.search-engine-optimization, 
-.online-reputation-management, 
-.social-media-marketing {
-    margin-bottom: 20px; /* A margin at the bottom of 20px*/
-    padding: 50px; /*Adds padding of 50px*/
-    height: 300px; /*Makes the height of each box 300px*/
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Sets the font to Gill Sans*/
-    background-color: #0072bb; /*The colors of the boxes with be blue*/
-    color: #ffffff; /*The text within the boxes will be white.*/
-}
-
-/*Allows each of the images in these given classes a max height of 200 px for consistency throughout the page.*/
-.search-engine-optimization img, 
-.online-reputation-management img, 
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-/*Makes all the font sizes of these class headings to be size 36 as well giving them a margin spacing of 20px at the bottom.*/
-.search-engine-optimization h2, 
-.online-reputation-management h2, 
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-/*Give the footer the set elements.*/
+/*Gives the footer the set elements.*/
 footer {
     padding: 30px; /*Adds a padding around the footer block of 30px.*/
     clear: both; /*Allows the footer to sit under everything else instead next to the blocks that are floating.*/
@@ -167,3 +175,20 @@ footer {
 footer h2 {
     font-size: 20px;
 }
+
+@media screen and (max-width: 1020px) {
+    header, main, section, footer {
+        /* This code here is going to allow the site to be a lot mobile friendly as it will help with small screen resolutions. */
+        display: flex;
+        flex: 0 0 0 400px;
+    }
+}
+
+/* The while the navigation of the screen worked well with the addition of the flexbox I needed to add these so that the reset of the page didn't get weird. */
+@media screen and (max-width: 1020px) {
+   main, section, footer {
+        /* Rather then having the aside column and then article blocks try to topple each other I had them flex wrap and then make the direction a column so that they stacked neatly. */
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex: 0 0 0 400px;
+    }
