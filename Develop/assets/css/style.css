@@ -1,0 +1,169 @@
+/*Provides the page with structure with out making the padding and margin apparent nor there.*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Adds the "selected" color to the body of the page.*/
+body {
+    background-color: #d9dcd6;
+}
+
+/*Adds the "selected" elements to the header tag. */
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
+}
+
+/*Applying a set font size and display block for the heading in the header tag. */
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+/*The heading in the tag header and the class seo with both be set to this color.*/
+header h1 .seo {
+    color: #d9dcd6;
+}
+
+/*Setting these elements to the header nav allows for the navigation link to float to the right and set at certain font. Also adds padding to the top of the block and margin to the right.*/
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    overflow: auto;
+    clear: both;
+}
+
+/*Removes the bullets on the listed navigation links within the nav tag.*/
+header nav ul {
+    list-style-type: none;
+}
+
+/*These elements give the links in the list some margin room to left of each other.*/
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/*Makes the links white and without underlines for a cleaner look.*/
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*Sets font size to 16px for all paragraphs blocks.*/
+p {
+    font-size: 16px;
+}
+
+/*Links the Meeting photo to the html as adjusting it to fit within the requirements wanted.*/
+.hero {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/digital-marketing-meeting.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*Floats the image in the first and third article to the left with a margin to the right of 25px.*/
+.search, .social {
+    float: left;
+    margin-right: 25px;
+}
+
+/*Floats the image in the 2nd article to the right with a margin to left of 25px.*/
+.onlinerep {
+    float: right;
+    margin-left: 25px;
+}
+
+/*Floats the image in the 3rd article to the left with a margin to the right of 25px.*/
+.content {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/*Everything that is included with the class "benefits" with be set with these elements.*/
+.benefits {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+
+/*These 3 classes with be given a margin at the bottom of 32px and set color of white.*/
+.benefit-lead, 
+.benefit-brand, 
+.benefit-cost {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+/*These 3 classes h3s' will be given a margin at the bottom of 10px and the text will be aligned at the center.*/
+.benefit-lead h3, 
+.benefit-brand h3, 
+.benefit-cost h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*These 3 classes imgs' wil be given margin of 10px around them and max width of 150px so they don't show up oversized or different sizes.*/
+.benefit-lead img, 
+.benefit-brand img, 
+.benefit-cost img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+/*Each of these classes are set with given elements*/
+.search-engine-optimization, 
+.online-reputation-management, 
+.social-media-marketing {
+    margin-bottom: 20px; /* A margin at the bottom of 20px*/
+    padding: 50px; /*Adds padding of 50px*/
+    height: 300px; /*Makes the height of each box 300px*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Sets the font to Gill Sans*/
+    background-color: #0072bb; /*The colors of the boxes with be blue*/
+    color: #ffffff; /*The text within the boxes will be white.*/
+}
+
+/*Allows each of the images in these given classes a max height of 200 px for consistency throughout the page.*/
+.search-engine-optimization img, 
+.online-reputation-management img, 
+.social-media-marketing img {
+    max-height: 200px;
+}
+
+/*Makes all the font sizes of these class headings to be size 36 as well giving them a margin spacing of 20px at the bottom.*/
+.search-engine-optimization h2, 
+.online-reputation-management h2, 
+.social-media-marketing h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/*Give the footer the set elements.*/
+footer {
+    padding: 30px; /*Adds a padding around the footer block of 30px.*/
+    clear: both; /*Allows the footer to sit under everything else instead next to the blocks that are floating.*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*Sets the font to Trebuchet MS.*/
+    text-align: center; /*Aligns the footer text to the center of the block.*/
+}
+
+/*Sets the heading in the footer to font size of 20px*/
+footer h2 {
+    font-size: 20px;
+}
